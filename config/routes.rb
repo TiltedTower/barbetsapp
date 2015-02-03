@@ -9,7 +9,13 @@ Rails.application.routes.draw do
 
   get 'sign_in' => 'sign_in#index'
 
+  get 'sign_up' => 'sign_up#index'
 
+  get 'game' => 'game#index'
+
+  get 'about' => 'about#index'
+
+  get 'terms' => 'about#terms'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -10,26 +10,34 @@
 
   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
-      <div class="navbar-brand" href="/">BarBets</a>
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">
+        <img alt="logo"<%= image_tag('logo.jpg') %></a>
       </div>
+       <ul class="nav nav-pills" role="navigation">
+         <li><a href="profile#index" id="link1">Profile</a></li>
+         <li><a href="game#index" id="link1">Games</a></li>
+       </ul>
     </div>
   </div>
-
-  <p></p>
 
   <div class="container">
 
 
-
 <%= yield %>
 
-
 <footer>
-  <div class="row">
-    <div class="col-md-6">
-      <%= link_to "My Profile", profile_path %>
 
+  <div class="row">
+    <div class="col-md-offset-11">
+      <%= link_to "About", about_path %>
+      |
+      <%= link_to "Terms", terms_path %>
     </div>
+
+
+
+
 
 
   </div>
