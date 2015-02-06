@@ -21,16 +21,14 @@ footer {
   padding-top: 0px;
 }
 
-.nav-pills {
-  background-color: #ffffff;
-}
-
 #link1 {
   color: #000000;
 }
 
-#link1:hover {
+#link1:hover,
+#link2:hover {
   color: #eaa21c;
+  background-color: #ffffff;
 }
 
 a:link {
