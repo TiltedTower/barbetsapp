@@ -16,34 +16,32 @@ th {
 }
 
 .navbar {
-  background-color: #ffffff;
+  background-color: #fff;
   padding-top: 5px;
-  text-color: #000000;
+  text-color: #000;
 }
 
 .navbar-brand {
   padding-top: 0px;
 }
 
-#link1,
-#link2 {
-  color: #000000;
+.navbar ul li {
+  color: #000;
   font-size: 1.3em;
 }
 
-#link1:hover,
-#link2:hover {
+.navbar ul li:hover {
   color: #eaa21c;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 a:link {
-  color: #000000;
+  color: #000;
   text-decoration: none;
 }
 
 a:visited {
-  color: #000000;
+  color: #000;
   text-decoration: none;
 }
 
