@@ -1,38 +1,60 @@
-<h1>Sign Up</h1>
+<div class="page-header">
+  <div class="col-md-offset-4"><h3>Sign Up Here</h3></div>
+</div>
+
+<p>&nbsp;</p>
+
 
 <%= form_for @user, url: signup_path do |f| %>
 
-<% if @user.errors.present? %>
-<ul>
-  <% @user.errors.full_messages.each do |message| %>
+    <% if @user.errors.present? %>
+  <ul>
+    <% @user.errors.full_messages.each do |message| %>
   <li><%= message %></li>
-  <% end %>
-</ul>
-<% end %>
 
-<div>
-  <%= f.label :email %>
-</div>
-<div>
-  <%= f.email_field :email %>
-</div>
+    <% end %>
+  </ul>
+    <% end %>
 
-<div>
-  <%= f.label :password %>
-</div>
-<div>
-  <%= f.password_field :password %>
-</div>
+<!-- Form Fields -->
+<div class="container col-md-offset-1">
 
-<div>
-  <%= f.label :password_confirmation %>
-</div>
-<div>
-  <%= f.password_field :password_confirmation %>
+<div class="form-group row">
+    <label class="control-label col-md-1 text-right"><%= f.label :name %></label>
+  <div class="form-controls col-md-3">
+    <input class="form-control"<%= f.text_field :name %></div>
+
+    <label class="control-label col-md-1 text-right"><%= f.label :hometown %></label>
+  <div class="form-controls col-md-3">
+    <input class="form-control"<%= f.email_field :hometown %></div>
 </div>
 
-<div>
-  <%= f.submit "Sign up" %>
+<div class="form-group row">
+    <label class="control-label col-md-1 text-right"><%= f.label :birthday %></label>
+  <div class="form-controls col-md-2">
+    <input class="form-control"<%= f.date_field :birthday %></div>
+
+    <label class="control-label col-md-1 col-md-offset-1 text-right"><%= f.label :password %></label>
+  <div class="form-controls col-md-3">
+    <input class="form-control"<%= f.password_field :password %></div>
 </div>
 
-<% end %>
+<div class="form-group row">
+    <label class="control-label col-md-1 text-right"><%= f.label :email %></label>
+  <div class="form-controls col-md-3">
+    <input class="form-control"<%= f.email_field :email %></div>
+
+    <label class="control-label col-md-1 text-right"><%= f.label 'Confirm Password' %></label>
+  <div class="form-controls col-md-3">
+    <input class="form-control"<%= f.password_field :password_confirmation %></div>
+</div>
+
+<div class="form-group">
+  <div class="actions col-md-offset-5 col-md-2">
+    <%= f.submit class: "btn btn-large btn-block btn-warning" %>
+    <% end %>
+  </div>
+</div>
+
+
+</div>
