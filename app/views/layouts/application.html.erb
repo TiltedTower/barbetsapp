@@ -16,13 +16,15 @@
         <img alt="logo"<%= image_tag('logo.jpg') %></a>
       </div>
        <ul class="nav nav-pills" role="navigation">
+            <li><a href="users#show">Profile</a></li>
+            <li><a href="game#index">Games</a></li>
+       <ul class="nav nav-pills pull-right" role="navigation">
          <% if current_user %>
             <li><%= link_to "Sign Out", signout_path %></li>
            <% else %>
             <li><%= link_to "Sign In", signin_path %></li>
            <% end %>
-         <li><a href="users#show">Profile</a></li>
-         <li><a href="game#index">Games</a></li>
+         </ul>
        </ul>
     </div>
   </div>
