@@ -2,7 +2,7 @@
 @import "bootstrap";
 
 body {
-  padding-top: 70px;
+  padding-top: 60px;
 }
 
 footer {
@@ -16,28 +16,10 @@ th {
 }
 
 .btn-custom {
-  border-width: 3px;
+  border-width: 1px;
   border-color: #000;
   background-color: #eaa21c;
 }
-
-// .btn-custom {
-  // background-color: hsl(0, 0%, 9%) !important;
-  // background-repeat: repeat-x;
-  // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#494949", endColorstr="#161616");
-  // background-image: -khtml-gradient(linear, left top, left bottom, from(#494949), to(#161616));
-  // background-image: -moz-linear-gradient(top, #494949, #161616);
-  // background-image: -ms-linear-gradient(top, #494949, #161616);
-  // background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #494949), color-stop(100%, #161616));
-  // background-image: -webkit-linear-gradient(top, #494949, #161616);
-  // background-image: -o-linear-gradient(top, #494949, #161616);
-  // background-image: linear-gradient(#494949, #161616);
-  // border-color: #eaa21c #eaa21c;
-  // border-width: 2px;
-//   color: #eaa21c !important;
-//   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33);
-//   -webkit-font-smoothing: antialiased;
-// }
 
 .navbar {
   background-color: #fff;

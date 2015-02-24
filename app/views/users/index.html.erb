@@ -5,6 +5,7 @@
     <thead>
       <tr>
         <th>Name</th>
+        <th>Email</th>
         <th>Hometown</th>
         <th>Birthday</th>
       </tr>
@@ -14,8 +15,12 @@
       <% @users.each do |user| %>
       <tr>
         <td><%= link_to user.name, user %></td>
+        <td><%= user.email %></td>
         <td><%= user.hometown %></td>
         <td><%= user.birthday %></td>
+        <td>
+          <%= link_to 'Edit', edit_user_path(user), class: "btn btn-xs btn-default" %>
+          <%= link_to 'Delete', user, class: "btn btn-xs btn-warning", method: :delete, data: { confirm: 'Are you sure?' } %>
       </tr>
       <% end %>
     </tbody>
