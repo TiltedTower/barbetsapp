@@ -57,4 +57,5 @@ private
   def set_task
     @user = User.find(params[:id])
   end
+  
 end
