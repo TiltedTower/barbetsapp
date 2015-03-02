@@ -1,8 +1,10 @@
 <div class="page-header">
-  <div class="col-md-offset-4"><h3>Sign Up Here</h3></div>
+  <div class="text-center"><h3>Sign Up</h3></div>
 </div>
 
 <p>&nbsp;</p>
+
+<div class='container'>
 
 
 <%= form_for @user, url: signup_path do |f| %>
@@ -10,50 +12,51 @@
     <% if @user.errors.present? %>
   <ul>
     <% @user.errors.full_messages.each do |message| %>
-  <li><%= message %></li>
-
+      <li><%= message %></li>
     <% end %>
   </ul>
     <% end %>
 
 <!-- Form Fields -->
-<div class="container col-md-offset-1">
+<div class='col-md-4 col-md-offset-4'>
 
-<div class="form-group row">
-    <label class="control-label col-md-1 text-right"><%= f.label :name %></label>
-  <div class="form-controls col-md-3">
-    <input class="form-control"<%= f.text_field :name %></div>
-
-    <label class="control-label col-md-1 text-right"><%= f.label :hometown %></label>
-  <div class="form-controls col-md-3">
-    <input class="form-control"<%= f.email_field :hometown %></div>
+<div class='form-group'>
+    <%= f.label :name %>
+    <%= f.text_field :name, class:'form-control' %>
 </div>
 
-<div class="form-group row">
-    <label class="control-label col-md-1 text-right"><%= f.label :birthday %></label>
-  <div class="form-controls col-md-2">
-    <input class="form-control"<%= f.date_field :birthday %></div>
-
-    <label class="control-label col-md-1 col-md-offset-1 text-right"><%= f.label :password %></label>
-  <div class="form-controls col-md-3">
-    <input class="form-control"<%= f.password_field :password %></div>
+<div class='form-group'>
+    <%= f.label :hometown %>
+    <%= f.email_field :hometown, class:'form-control' %>
 </div>
 
-<div class="form-group row">
-    <label class="control-label col-md-1 text-right"><%= f.label :email %></label>
-  <div class="form-controls col-md-3">
-    <input class="form-control"<%= f.email_field :email %></div>
-
-    <label class="control-label col-md-1 text-right"><%= f.label 'Confirm Password' %></label>
-  <div class="form-controls col-md-3">
-    <input class="form-control"<%= f.password_field :password_confirmation %></div>
+<div class='form-group'>
+    <%= f.label :birthday %>
+    <%= f.date_field :birthday, class:'form-control' %>
 </div>
 
-<div class="form-group">
-  <div class="actions col-md-offset-5 col-md-2">
+<div class='form-group'>
+    <%= f.label :email %>
+    <%= f.email_field :email, class:'form-control' %>
+</div>
+
+<div class='form-group'>
+  <%= f.label :password %>
+    <%= f.password_field :password, class:'form-control' %>
+</div>
+
+<div class='form-group'>
+    <%= f.label 'Confirm Password' %>
+    <%= f.password_field :password_confirmation, class:'form-control' %>
+</div>
+
+<div class='form-group'>
+  <div class="actions">
     <%= f.submit class: "btn btn-large btn-block btn-warning" %>
     <% end %>
   </div>
+</div>
+
 </div>
 
 

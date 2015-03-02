@@ -11,42 +11,31 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    respond_to do |format|
-      if @user.save
-        format.html { redirect_to users_path, notice: 'User was successfully created' }
-        format.json { render :show, status: :created, location: @user }
-      else
-        render :new
-      end
+    if @user.save
+      redirect_to users_path, notice: 'User was successfully created'
+    else
+      render :new
     end
   end
 
-
   def update
-    respond_to do |format|
-      if @user.update(user_params)
-        format.html { redirect_to users_path, notice: 'User was successfully updated' }
-        format.json { render :show, status: :ok, location: @user }
-      else
-        render :edit
-      end
+    if @user.update(user_params)
+      redirect_to users_path, notice: 'User was successfully updated'
+    else
+      render :edit
     end
   end
 
   def destroy
     @user.destroy
-    respond_to do |format|
-      format.html { redirect_to users_path, notice: 'User was successfully deleted' }
-    end
+    redirect_to users_path, notice: 'User was successfully deleted'
   end
-
 
   def show
   end
 
   def edit
   end
-
 
 private
 
@@ -57,5 +46,5 @@ private
   def set_task
     @user = User.find(params[:id])
   end
-  
+
 end
