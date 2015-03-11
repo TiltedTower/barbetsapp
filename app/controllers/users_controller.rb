@@ -40,7 +40,7 @@ class UsersController < ApplicationController
 private
 
   def user_params
-    params.require(:user).permit(:name, :hometown, :birthday, :password, :email)
+    params.require(:user).permit(:name, :hometown, :birthday, :email, :password, :password_confirmation)
   end
 
   def set_task

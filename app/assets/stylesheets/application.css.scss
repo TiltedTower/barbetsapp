@@ -15,16 +15,6 @@ th {
   color: #eaa21c;
 }
 
-// .control-label {
-//   display: inline-block;
-//   vertical-align: middle;
-// }
-// .btn-custom {
-//   border-width: 1px;
-//   border-color: #000;
-//   background-color: #eaa21c;
-// }
-
 .navbar {
   background-color: #fff;
   padding-top: 5px;
@@ -33,6 +23,12 @@ th {
 
 .navbar-brand {
   padding-top: 0px;
+}
+
+.navbar-form {
+  color: #000;
+  font-size: .8em;
+  text-decoration: none;
 }
 
 .navbar ul li {

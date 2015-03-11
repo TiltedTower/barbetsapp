@@ -20,9 +20,21 @@
             <li><a href="game#index">Games</a></li>
        <ul class="nav nav-pills pull-right" role="navigation">
          <% if current_user %>
-            <li><%= link_to "Sign Out", signout_path %></li>
+          <li class='btn btn-default'><%= link_to "Sign Out", signout_path %></li>
            <% else %>
-            <li><%= link_to "Sign In", signin_path %></li>
+          <li>
+              <form class='navbar-form navbar-left' role='form'>
+                <%= form_tag signin_path do |f| %>
+                  <div class='form-group'>
+                    <%= label_tag :email %>
+                    <%= email_field_tag :email, nil, class:'form-control' %>
+                    <%= label_tag :password %>
+                    <%= password_field_tag :password, nil, class:'form-control' %>
+                    <%= submit_tag "Sign In", class:'btn btn-default' %>
+                  </div>
+                <% end %>
+            </form>
+          </li>
            <% end %>
          </ul>
        </ul>

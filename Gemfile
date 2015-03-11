@@ -11,6 +11,7 @@ source 'https://rubygems.org'
   gem 'jbuilder', '~> 2.0'
   gem 'sdoc', '~> 0.4.0', group: :doc
   gem 'bcrypt', '~> 3.1.9'
+  gem 'faraday', '~> 0.9.1'
 
 group :production do
 
