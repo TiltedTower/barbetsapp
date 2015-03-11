@@ -1,0 +1,14 @@
+<%= form_tag 'game', method: :get do %>
+<%= label_tag 'Sport' %>
+<%= text_field_tag(:sport)%>
+<%= submit_tag 'Get Odds' %>
+<% end %>
+
+<% @sorted_games.each do |game| %>
+  <p><%= game["HomeTeam"] %>
+      vs
+      <%= game["AwayTeam"] %>
+    </p>
+    <% end %>
+
+    
