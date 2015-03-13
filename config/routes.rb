@@ -4,11 +4,15 @@ Rails.application.routes.draw do
 
   resources :users
 
+  get 'game/:ID' =>'game#show'
+
   get 'game' => 'game#index'
 
   get 'about' => 'about#index'
 
   get 'terms' => 'about#terms'
+
+  get '/' => 'game#index'
 
   get '/sign-up' => 'registrations#new', as: :signup
   post '/sign-up' => 'registrations#create'

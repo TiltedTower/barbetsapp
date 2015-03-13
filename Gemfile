@@ -12,6 +12,7 @@ source 'https://rubygems.org'
   gem 'sdoc', '~> 0.4.0', group: :doc
   gem 'bcrypt', '~> 3.1.9'
   gem 'faraday', '~> 0.9.1'
+  gem 'twitter'
 
 group :production do
 
@@ -26,5 +27,6 @@ group :development, :test do
   gem 'better_errors'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'dotenv-rails'
 
 end

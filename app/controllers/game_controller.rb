@@ -1,8 +1,15 @@
 class GameController < ApplicationController
 
   def index
-    @conn = OddsFeed.new
-    @sorted_games = @conn.games(params[:sport])
+    @odds = OddsFeed.new
+    @tweet = TweetFetcher.new
+    @sorted_games = @odds.games(params[:sport])
+    @team_tweets = @tweet.find_tweets(params[:word])
+  end
+
+  def show
+    @odds = OddsFeed.new
+    @game_show = @odds.games(params[:sport])
   end
 
 end

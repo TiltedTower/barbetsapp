@@ -5,10 +5,17 @@
 <% end %>
 
 <% @sorted_games.each do |game| %>
-  <p><%= game["HomeTeam"] %>
-      vs
-      <%= game["AwayTeam"] %>
-    </p>
+  <%= link_to "game/#{game['ID']}" do %>
+    <p><%= game["HomeTeam"] %> vs <%= game["AwayTeam"] %></p>
     <% end %>
+  <% end %>
 
-    
+<%= form_tag '/', method: :get do %>
+<%= label_tag 'Team Tweets' %>
+<%= text_field_tag(:word) %>
+<%= submit_tag 'Get Tweets' %>
+<% end %>
+
+<% @team_tweets.each do |tweet| %>
+  <%= tweet.text %>
+  <% end %>
