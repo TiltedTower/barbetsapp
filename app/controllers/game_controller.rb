@@ -1,4 +1,5 @@
 class GameController < ApplicationController
+  caches_page :index
 
   def index
     @odds = OddsFeed.new

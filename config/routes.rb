@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   resources :users
 
+  get '/auth/:provider/callback' => 'authentication#index'
+
   get 'game/:ID' =>'game#show'
 
   get 'game' => 'game#index'
