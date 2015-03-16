@@ -14,7 +14,7 @@ class OddsFeed
       JSON.parse(game.body)
   end
 
-  
+
 
 
 end

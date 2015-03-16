@@ -13,6 +13,10 @@ source 'https://rubygems.org'
   gem 'bcrypt', '~> 3.1.9'
   gem 'faraday', '~> 0.9.1'
   gem 'twitter'
+  gem 'actionpack-page_caching'
+  gem 'rails-observers'
+  gem 'omniauth'
+  gem 'omniauth-twitter'
 
 group :production do
 
